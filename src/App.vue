@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import FormClient from '@/components/FormClient.vue'
+import FormClient from '@/components/FormClient'
 
 export default {
   name: 'App',
