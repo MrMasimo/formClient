@@ -75,8 +75,7 @@
           <select @blur="$v.formReg.groupClient.$touch()"
             :class="status($v.formReg.groupClient)"
             v-model="formReg.groupClient"
-            class="select-control" id="groupClient" size="1">
-              <option></option>
+            class="multyselect-control" id="groupClient" multiple>
               <option>VIP</option>
               <option>Проблемные</option>
               <option>ОМС</option>
@@ -243,7 +242,7 @@ export default {
           birth: '',
           phone: '',
           gender: '',
-          groupClient: '',
+          groupClient: [],
           doctor: '',
           isSms: false,
         },
@@ -439,6 +438,19 @@ p{
   border: 1px solid #000;
   margin-top:5px;
   padding: 10px 15px;
+}
+
+.multyselect-control{
+  width: 200px;
+  border-radius: 5px;
+  border: 1px solid #000;
+  margin-top:5px;
+  padding: 10px 15px 0px;
+  overflow-y: auto;
+}
+
+.multyselect-control option{
+  margin: 3px 0 ;
 }
 
 .checkBox-control{
